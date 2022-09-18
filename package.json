@@ -1,4 +1,14 @@
 {
+  "name":"hardhat-fund-me",
+  "author":"Patrick Collins",
+  "scripts": {
+    "test": "yarn hardhat test",
+    "test:staging":"yarn hardhat test --network goerli",
+    "lint":"yarn solhint 'contracts/*.sol'",
+    "lint:fix":"yarn solhint 'contracts/*.sol' --fix",
+    "format":"yarn prettier --write .",
+    "coverage":"yarn hardhat coverage"
+  },
   "devDependencies": {
     "@chainlink/contracts": "^0.4.1",
     "@ethersproject/abi": "^5.4.7",

@@ -102,7 +102,7 @@ const { developmentChains } = require("../../helper-harhat-config")
             const accounts = await ethers.getSigners()
             const hackerConnectedContract = await fundMe.connect(accounts[1])
             // act and assert
-            await expect(hackerConnectedContract.withdraw()).to.be.reverted
+            await expect(hackerConnectedContract.withdraw()).to.be.revertedWithCustomError(fundMe,'FundMe__NotOwner')
         })
     })
     describe('cheaperWithdraw',async()=>{
